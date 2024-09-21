@@ -16,15 +16,7 @@ import LinuxIcon from "../assets/svg/linux.svg";
 const TechStack = () => {
   return (
     <section className="techstack">
-      <div className="wrapper">
-        <div className="techstack__intro">
-          <h1 className="techstack__title">My Tech Stack</h1>
-          <p className="techstack__description">
-            My skill set includes a variety of programming languages and
-            frameworks, ensuring I can tackle front-end, back-end, and full
-            stack development.
-          </p>
-        </div>
+      <div className="wrapper techstack__container">
         <div className="techstack__images">
           <img src={ReactIcon} className="techstack__icon" alt="React js" />
           <img src={GolangIcon} className="techstack__icon" alt="Golang" />
@@ -48,6 +40,14 @@ const TechStack = () => {
           <img src={PostmanIcon} className="techstack__icon" alt="Postman" />
           <img src={LinuxIcon} className="techstack__icon" alt="Linux" />
           <img src={AWSIcon} className="techstack__icon" alt="AWS" />
+        </div>
+        <div className="techstack__intro">
+          <h1 className="techstack__title">My Tech Stack</h1>
+          <p className="techstack__description">
+            My skill set includes a variety of programming languages and
+            frameworks, ensuring I can tackle front-end, back-end, and full
+            stack development.
+          </p>
         </div>
       </div>
     </section>

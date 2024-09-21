@@ -1,0 +1,147 @@
+.experiences {
+  margin: 5rem 0;
+
+  @media (min-width: $md) {
+    margin: 7rem 0;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "intro"
+      "list";
+
+    @media (min-width: $lg) {
+      grid-template-columns: 1fr 1fr;
+      column-gap: 4rem;
+      grid-template-areas: "intro list";
+    }
+  }
+
+  &__intro {
+    grid-area: intro;
+  }
+
+  &__title {
+    font-family: $BebasNeue;
+    letter-spacing: 1px;
+    color: $lapisBlue;
+    font-size: 2.5rem;
+
+    @media (min-width: $md) {
+      text-align: left;
+      font-size: 3rem;
+    }
+  }
+
+  &__description {
+    font-family: $Manrope;
+    color: $stormGrey;
+    line-height: 1.5;
+    padding-top: 0.5rem;
+
+    @media (min-width: $md) {
+      text-align: left;
+    }
+  }
+
+  &__list {
+    grid-area: list;
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+    margin-top: 3rem;
+
+    @media (min-width: $lg) {
+      margin-top: 0;
+    }
+  }
+
+  &__info {
+    font-family: $Manrope;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+      "point date"
+      "point company"
+      "point position"
+      "point works"
+      "point badges";
+
+    @media (min-width: $sm) {
+      grid-template-columns: auto 2fr 1fr;
+      grid-template-areas:
+        "point company date"
+        "point position position"
+        "point works works"
+        "point badges badges";
+    }
+  }
+
+  &__bullet-point {
+    grid-area: point;
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    margin-right: 1.5rem;
+  }
+
+  &__company-name {
+    grid-area: company;
+    color: $frenchBlue;
+    align-self: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+
+  &__date {
+    grid-area: date;
+    color: $frenchBlue;
+    font-weight: bold;
+    justify-self: left;
+    align-self: center;
+
+    @media (min-width: $sm) {
+      justify-self: right;
+    }
+  }
+
+  &__position {
+    grid-area: position;
+    justify-self: left;
+    color: $stormGrey;
+  }
+
+  &__work-description {
+    grid-area: works;
+    padding-top: 1rem;
+    font-size: 0.9rem;
+    color: $stormGrey;
+  }
+
+  &__tech-badges {
+    grid-area: badges;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding-top: 1rem;
+    color: $stormGrey;
+  }
+
+  &__tech-badge {
+    width: 9%;
+
+    @media (min-width: $sm) {
+      width: 5%;
+    }
+
+    @media (min-width: $md) {
+      width: 4%;
+    }
+
+    @media (min-width: $lg) {
+      width: 5%;
+    }
+  }
+}
