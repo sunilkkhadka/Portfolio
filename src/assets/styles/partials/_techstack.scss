@@ -1,8 +1,26 @@
 .techstack {
-  margin-top: 3rem;
+  margin: 3rem 0;
 
   @media (min-width: $md) {
-    margin-top: 7rem;
+    margin: 7rem 0;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "intro"
+      "images";
+
+    @media (min-width: $md) {
+      column-gap: 5rem;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "images intro";
+    }
+  }
+
+  &__intro {
+    grid-area: intro;
   }
 
   &__title {
@@ -12,9 +30,10 @@
     color: $lapisBlue;
     font-size: 2.5rem;
 
-    // @media (min-width: $md) {
-    //   text-align: left;
-    // }
+    @media (min-width: $md) {
+      text-align: left;
+      font-size: 3rem;
+    }
   }
 
   &__description {
@@ -25,26 +44,33 @@
     padding-top: 0.5rem;
 
     @media (min-width: $md) {
-      width: 80%;
-      margin: 0 auto;
+      // width: 80%;
+      text-align: left;
     }
   }
 
   &__icon {
     width: 20%;
     object-fit: contain;
-    filter: drop-shadow(7px 5px 2px rgba(0, 0, 0, 0.1));
+    // filter: drop-shadow(7px 5px 2px rgba(0, 0, 0, 0.1));
 
     @media (min-width: $md) {
-      width: 5%;
+      width: 10%;
     }
   }
 
   &__images {
+    grid-area: images;
     margin-top: 2rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 2.5rem;
+
+    @media (min-width: $md) {
+      gap: 2rem;
+      margin: 0;
+      justify-content: flex-start;
+    }
   }
 }
