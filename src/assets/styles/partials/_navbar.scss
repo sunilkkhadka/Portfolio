@@ -1,0 +1,91 @@
+.navbar {
+  &__container {
+    padding: 1.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    font-family: $BebasNeue;
+    font-size: 1.75rem;
+    color: $white;
+    letter-spacing: 1px;
+    color: #c7c7c7;
+  }
+
+  &__links {
+    display: flex;
+    font-family: $Manrope;
+  }
+
+  &__mobile {
+    position: relative;
+
+    &-links {
+      display: none;
+      position: absolute;
+
+      &.open {
+        display: block;
+      }
+    }
+  }
+
+  &__desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: $Manrope;
+
+    &-links {
+      display: flex;
+      gap: 2.5rem;
+
+      li:hover {
+        font-weight: bold;
+        border-bottom: 3px solid yellow;
+      }
+    }
+
+    // &-contact-me {
+    //   border: 0;
+    //   background: none;
+    //   color: $white;
+    // }
+
+    &-contact-me {
+      border: 1px solid $white;
+      background: none;
+      color: $white;
+      padding: 0.7rem 1.5rem;
+      margin-right: 1rem;
+      border-radius: 0.7rem;
+    }
+
+    &-download-cv {
+      background-color: rgb(234, 234, 0);
+      border: none;
+      padding: 0.7rem 1.5rem;
+      border-radius: 0.7rem;
+    }
+  }
+
+  &__hamburger {
+    cursor: pointer;
+    height: 2rem;
+    width: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.4rem;
+
+    div {
+      height: 2px;
+      width: 1.5rem;
+      background-color: $white;
+      border-radius: 0.5rem;
+    }
+  }
+}
