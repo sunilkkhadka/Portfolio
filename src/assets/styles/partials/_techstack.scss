@@ -1,0 +1,50 @@
+.techstack {
+  margin-top: 3rem;
+
+  @media (min-width: $md) {
+    margin-top: 7rem;
+  }
+
+  &__title {
+    font-family: $BebasNeue;
+    letter-spacing: 1px;
+    text-align: center;
+    color: $lapisBlue;
+    font-size: 2.5rem;
+
+    // @media (min-width: $md) {
+    //   text-align: left;
+    // }
+  }
+
+  &__description {
+    font-family: $Manrope;
+    text-align: center;
+    color: $stormGrey;
+    line-height: 1.5;
+    padding-top: 0.5rem;
+
+    @media (min-width: $md) {
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+
+  &__icon {
+    width: 20%;
+    object-fit: contain;
+    filter: drop-shadow(7px 5px 2px rgba(0, 0, 0, 0.1));
+
+    @media (min-width: $md) {
+      width: 5%;
+    }
+  }
+
+  &__images {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+  }
+}
