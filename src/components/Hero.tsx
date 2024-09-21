@@ -1,5 +1,8 @@
 import { FaDownload, FaPhoneFlip } from "react-icons/fa6";
 
+import GithubIcon from "../assets/svg/github.svg";
+import LinkedinIcon from "../assets/svg/linkedin.svg";
+
 import Navbar from "./Navbar";
 
 import profile from "../assets/images/1697507006331.jpeg";
@@ -20,6 +23,18 @@ const Hero = () => {
             clean code and innovative solutions, I aim to bring your ideas to
             life through seamless digital experiences.
           </p>
+          <div className="hero__desktop-action-btns">
+            <button className="hero__desktop-download-cv">
+              <span className="icon">
+                <FaDownload />
+              </span>
+              Download CV
+            </button>
+            <div className="hero__desktop-social-icons">
+              <img src={LinkedinIcon} alt="" />
+              <img src={GithubIcon} alt="" />
+            </div>
+          </div>
           <div className="hero__action-btns">
             <button className="hero__contact-me">
               <span className="icon">
