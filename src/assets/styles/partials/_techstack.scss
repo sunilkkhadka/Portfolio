@@ -12,7 +12,7 @@
       "intro"
       "images";
 
-    @media (min-width: $md) {
+    @media (min-width: $lg) {
       column-gap: 5rem;
       grid-template-columns: 1fr 1fr;
       grid-template-areas: "images intro";
@@ -26,11 +26,10 @@
   &__title {
     font-family: $BebasNeue;
     letter-spacing: 1px;
-    text-align: center;
     color: $lapisBlue;
     font-size: 2.5rem;
 
-    @media (min-width: $md) {
+    @media (min-width: $lg) {
       text-align: left;
       font-size: 3rem;
     }
@@ -38,23 +37,32 @@
 
   &__description {
     font-family: $Manrope;
-    text-align: center;
     color: $stormGrey;
     line-height: 1.5;
     padding-top: 0.5rem;
 
-    @media (min-width: $md) {
-      // width: 80%;
+    @media (min-width: $lg) {
       text-align: left;
     }
   }
 
   &__icon {
-    width: 20%;
+    width: 15%;
     object-fit: contain;
-    // filter: drop-shadow(7px 5px 2px rgba(0, 0, 0, 0.1));
+
+    @media (min-width: ($xsm + 100)) {
+      width: 10%;
+    }
+
+    @media (min-width: $sm) {
+      width: 8%;
+    }
 
     @media (min-width: $md) {
+      width: 7%;
+    }
+
+    @media (min-width: $lg) {
       width: 10%;
     }
   }
@@ -65,9 +73,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2.5rem;
+    gap: 2rem;
 
-    @media (min-width: $md) {
+    @media (min-width: $lg) {
       gap: 2rem;
       margin: 0;
       justify-content: flex-start;

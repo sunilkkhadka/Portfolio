@@ -47,7 +47,7 @@ const Experience = () => {
                 ensuring clear requirements and efficient development.
               </div>
               <div className="experiences__tech-badges">
-                Tools used:
+                <p>Tools used:</p>
                 <img
                   src={ReactIcon}
                   className="experiences__tech-badge"
@@ -124,7 +124,7 @@ const Experience = () => {
                 track traffic and user activity.
               </div>
               <div className="experiences__tech-badges">
-                Tools used:
+                <p>Tools used:</p>
                 <img
                   src={HtmlIcon}
                   className="experiences__tech-badge"
