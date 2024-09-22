@@ -27,6 +27,12 @@ const Hero = () => {
               </span>
               Download CV
             </button>
+            <button className="hero__desktop-contact-me">
+              <span className="icon">
+                <FaPhoneFlip />
+              </span>
+              Contact Me
+            </button>
           </div>
           <div className="hero__action-btns">
             <button className="hero__contact-me">
