@@ -1,8 +1,5 @@
 import { FaDownload, FaPhoneFlip } from "react-icons/fa6";
 
-import GithubIcon from "../assets/svg/github.svg";
-import LinkedinIcon from "../assets/svg/linkedin.svg";
-
 import Navbar from "./Navbar";
 
 import profile from "../assets/images/1697507006331.jpeg";
@@ -30,10 +27,12 @@ const Hero = () => {
               </span>
               Download CV
             </button>
-            <div className="hero__desktop-social-icons">
-              <img src={LinkedinIcon} alt="" />
-              <img src={GithubIcon} alt="" />
-            </div>
+            <button className="hero__desktop-contact-me">
+              <span className="icon">
+                <FaPhoneFlip />
+              </span>
+              Contact Me
+            </button>
           </div>
           <div className="hero__action-btns">
             <button className="hero__contact-me">

@@ -1,6 +1,11 @@
 import { useState } from "react";
 import useWindowSize from "../hooks/useWindowSize";
-import { FaDownload, FaPhoneFlip } from "react-icons/fa6";
+
+import { BsGithub } from "react-icons/bs";
+import { SiLinkedin } from "react-icons/si";
+
+import GithubIcon from "../assets/svg/github.svg";
+import LinkedinIcon from "../assets/svg/linkedin.svg";
 
 const Navbar = () => {
   const { windowSize: size } = useWindowSize();
@@ -36,19 +41,13 @@ const DesktopNav = () => {
           </li>
         </ul>
       </div>
-      <div>
-        <button className="navbar__desktop-contact-me">
-          <span className="icon">
-            <FaPhoneFlip />
-          </span>
-          Contact Me
-        </button>
-        <button className="navbar__desktop-download-cv">
-          <span className="icon">
-            <FaDownload />
-          </span>
-          Donwload CV
-        </button>
+      <div className="navbar__desktop-social-icons">
+        <a href="https://www.linkedin.com/in/khadka-sunil/" target="blank">
+          <SiLinkedin className="navbar__desktop-social-icon" />
+        </a>
+        <a href="https://github.com/sunilkkhadka/" target="blank">
+          <BsGithub className="navbar__desktop-social-icon" />
+        </a>
       </div>
     </>
   );
@@ -60,7 +59,10 @@ const MobileNav = () => {
   return (
     <div className="navbar__mobile">
       <div
-        className="navbar__hamburger"
+        // className="navbar__hamburger"
+        className={`${
+          isMobileNavOpen ? "navbar__hamburger open" : "navbar__hamburger"
+        }`}
         onClick={() => setIsMobileNavOpen((prev) => !prev)}
       >
         <div></div>
@@ -88,6 +90,14 @@ const MobileNav = () => {
         </li>
         <li>
           <a href="#">Pages</a>
+        </li>
+        <li className="navbar__mobile-links-socials">
+          <a href="https://www.linkedin.com/in/khadka-sunil/" target="blank">
+            <img src={LinkedinIcon} alt="linkedin" />
+          </a>
+          <a href="https://github.com/sunilkkhadka/" target="blank">
+            <img src={GithubIcon} alt="github" />
+          </a>
         </li>
       </ul>
     </div>
