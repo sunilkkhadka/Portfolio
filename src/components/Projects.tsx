@@ -67,7 +67,7 @@ const Projects = () => {
                 <span className="projects__project-tech-badge">typescript</span>
               </div>
               <div className="projects__project-action-btns">
-                <a href="#">
+                <a href="https://tabapay.com/" target="blank">
                   Live Demo <FaExternalLinkAlt />
                 </a>
                 <a href="#">
