@@ -1,6 +1,7 @@
 import "./assets/styles/main.scss";
 import Experience from "./components/Experience";
 import Hero from "./components/Hero";
+import Projects from "./components/Projects";
 import TechStack from "./components/TechStack";
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
       <Hero />
       <TechStack />
       <Experience />
+      <Projects />
     </main>
   );
 }

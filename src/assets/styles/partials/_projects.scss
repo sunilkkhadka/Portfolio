@@ -1,0 +1,126 @@
+.projects {
+  &__intro-title {
+    font-family: $BebasNeue;
+    letter-spacing: 1px;
+    color: $lapisBlue;
+    font-size: 2.5rem;
+
+    @media (min-width: $md) {
+      text-align: left;
+      font-size: 3rem;
+    }
+  }
+
+  &__list {
+    margin-top: 3rem;
+
+    @media (min-width: $lg) {
+      margin-top: 2rem;
+    }
+  }
+
+  &__intro-description {
+    font-family: $Manrope;
+    color: $stormGrey;
+    line-height: 1.5;
+    padding-top: 0.5rem;
+
+    @media (min-width: $md) {
+      text-align: left;
+    }
+  }
+
+  &__card {
+    display: grid;
+    margin-bottom: 5rem;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "project-image"
+      "project-info";
+
+    @media (min-width: $lg) {
+      column-gap: 3rem;
+      grid-template-columns: 1fr 1fr;
+      margin-bottom: 1rem;
+      padding: 1rem;
+      grid-template-areas: "project-image project-info";
+
+      &:hover {
+        cursor: pointer;
+        background-color: rgb(250, 250, 250);
+      }
+    }
+  }
+
+  &__card-image {
+    grid-area: project-image;
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+
+    @media (min-width: $lg) {
+      align-self: center;
+    }
+  }
+
+  &__card-info {
+    grid-area: project-info;
+    padding-top: 1rem;
+
+    @media (min-width: $lg) {
+      padding-top: 0;
+    }
+  }
+
+  &__project {
+    &-title {
+      font-family: $Manrope;
+      color: $frenchBlue;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    &-description {
+      font-family: $Manrope;
+      padding-top: 0.5rem;
+      font-size: 0.9rem;
+      color: $stormGrey;
+    }
+
+    &-tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      padding-top: 1rem;
+    }
+
+    &-tech-badge {
+      font-size: 0.8rem;
+      padding: 0.3rem 1rem;
+      font-weight: bold;
+      font-family: $Manrope;
+      border-radius: 1rem;
+      border: 1px solid $frenchBlue;
+      text-transform: uppercase;
+      color: $frenchBlue;
+    }
+
+    &-action-btns {
+      padding-top: 1.5rem;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+
+      a {
+        font-weight: bold;
+        color: $frenchBlue;
+        font-size: 0.9rem;
+        font-family: $Manrope;
+        text-transform: uppercase;
+        border-bottom: 2px solid $frenchBlue;
+      }
+    }
+  }
+}
