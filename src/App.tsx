@@ -4,6 +4,7 @@ import Contact from "./components/Contact";
 import Projects from "./components/Projects";
 import TechStack from "./components/TechStack";
 import Experience from "./components/Experience";
+import BackToTop from "./components/BackToTop";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Experience />
       <Projects />
       <Contact />
+      <BackToTop />
     </main>
   );
 }

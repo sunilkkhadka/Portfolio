@@ -21,12 +21,16 @@ const Hero = () => {
             life through seamless digital experiences.
           </p>
           <div className="hero__desktop-action-btns">
-            <button className="hero__desktop-download-cv">
+            <a
+              href="src/assets/files/Sunil_Khadka_CV.pdf"
+              download="Sunil_Khadka_CV"
+              className="hero__desktop-download-cv"
+            >
               <span className="icon">
                 <FaDownload />
               </span>
               Download CV
-            </button>
+            </a>
             <button className="hero__desktop-contact-me">
               <span className="icon">
                 <FaPhoneFlip />
@@ -41,12 +45,16 @@ const Hero = () => {
               </span>
               Contact Me
             </button>
-            <button className="hero__download-cv">
+            <a
+              href="src/assets/files/Sunil_Khadka_CV.pdf"
+              download="Sunil_Khadka_CV"
+              className="hero__download-cv"
+            >
               <span className="icon">
                 <FaDownload />
               </span>
               Download CV
-            </button>
+            </a>
           </div>
         </div>
         <div className="hero__profile-img">
