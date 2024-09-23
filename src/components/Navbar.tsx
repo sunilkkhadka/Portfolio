@@ -3,6 +3,7 @@ import useWindowSize from "../hooks/useWindowSize";
 
 import { BsGithub } from "react-icons/bs";
 import { SiLinkedin } from "react-icons/si";
+import { FaDownload } from "react-icons/fa6";
 
 import GithubIcon from "../assets/svg/github.svg";
 import LinkedinIcon from "../assets/svg/linkedin.svg";
@@ -47,6 +48,16 @@ const DesktopNav = () => {
         </a>
         <a href="https://github.com/sunilkkhadka/" target="blank">
           <BsGithub className="navbar__desktop-social-icon" />
+        </a>
+        <a
+          href="/Sunil_Khadka_CV.pdf"
+          download="Sunil_Khadka_CV"
+          className="navbar__desktop-download-cv"
+        >
+          <span className="navbar__desktop-download-icon">
+            <FaDownload />
+          </span>
+          Download CV
         </a>
       </div>
     </>
