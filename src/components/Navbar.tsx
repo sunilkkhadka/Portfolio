@@ -1,5 +1,5 @@
 import { useState } from "react";
-import useWindowSize from "../hooks/useWindowSize";
+import { Link } from "react-scroll";
 
 import { BsGithub } from "react-icons/bs";
 import { SiLinkedin } from "react-icons/si";
@@ -7,6 +7,8 @@ import { FaDownload } from "react-icons/fa6";
 
 import GithubIcon from "../assets/svg/github.svg";
 import LinkedinIcon from "../assets/svg/linkedin.svg";
+
+import useWindowSize from "../hooks/useWindowSize";
 
 const Navbar = () => {
   const { windowSize: size } = useWindowSize();
@@ -29,16 +31,24 @@ const DesktopNav = () => {
       <div className="navbar__desktop">
         <ul className="navbar__desktop-links">
           <li>
-            <a href="#">Work</a>
+            <Link to="techstack" smooth={true} duration={500}>
+              Tech Stack
+            </Link>
           </li>
           <li>
-            <a href="#">About</a>
+            <Link to="experiences" smooth={true} duration={500}>
+              Experience
+            </Link>
           </li>
           <li>
-            <a href="#">Blog</a>
+            <Link to="projects" smooth={true} duration={500}>
+              Projects
+            </Link>
           </li>
           <li>
-            <a href="#">Contact</a>
+            <Link to="contact" smooth={true} duration={500}>
+              Contact
+            </Link>
           </li>
         </ul>
       </div>
@@ -85,22 +95,24 @@ const MobileNav = () => {
         }`}
       >
         <li>
-          <a href="#">Home</a>
+          <Link to="techstack" smooth={true} duration={500}>
+            Tech Stack
+          </Link>
         </li>
         <li>
-          <a href="#">About</a>
+          <Link to="experiences" smooth={true} duration={500}>
+            Experience
+          </Link>
         </li>
         <li>
-          <a href="#">Pricing</a>
+          <Link to="projects" smooth={true} duration={500}>
+            Projects
+          </Link>
         </li>
         <li>
-          <a href="#">Blog</a>
-        </li>
-        <li>
-          <a href="#">Jobs</a>
-        </li>
-        <li>
-          <a href="#">Pages</a>
+          <Link to="contact" smooth={true} duration={500}>
+            Contact
+          </Link>
         </li>
         <li className="navbar__mobile-links-socials">
           <a href="https://www.linkedin.com/in/khadka-sunil/" target="blank">

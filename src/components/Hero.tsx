@@ -1,3 +1,4 @@
+import { Link } from "react-scroll";
 import { FaDownload, FaPhoneFlip } from "react-icons/fa6";
 
 import Navbar from "./Navbar";
@@ -31,12 +32,17 @@ const Hero = () => {
               </span>
               Download CV
             </a>
-            <button className="hero__desktop-contact-me">
+            <Link
+              to="contact"
+              smooth={true}
+              duration={500}
+              className="hero__desktop-contact-me"
+            >
               <span className="icon">
                 <FaPhoneFlip />
               </span>
               Contact Me
-            </button>
+            </Link>
           </div>
           <div className="hero__action-btns">
             <button className="hero__contact-me">
