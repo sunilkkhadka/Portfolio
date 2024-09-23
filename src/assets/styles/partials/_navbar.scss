@@ -90,16 +90,21 @@
     }
 
     &-download-cv {
-      background-color: rgb(234, 234, 0);
+      font-family: $Manrope;
       border: none;
-      padding: 0.7rem 1.5rem;
-      border-radius: 0.7rem;
+      border-bottom: 3px solid yellow;
+    }
+
+    &-download-icon {
+      padding-right: 0.3rem;
     }
 
     &-social-icons {
       display: flex;
       gap: 1rem;
       color: $white;
+      justify-content: center;
+      align-items: center;
       cursor: pointer;
     }
 

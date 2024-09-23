@@ -16,13 +16,18 @@ const Contact = () => {
             </p>
             <p>
               For more info, here's my{" "}
-              <span className="contact__email">resume</span>
+              <a href="/Sunil_Khadka_CV.pdf" download="Sunil_Khadka_CV">
+                <span className="contact__email">resume</span>
+              </a>
             </p>
             <div className="contact__social-icons">
-              <a href="#">
+              <a
+                href="https://www.linkedin.com/in/khadka-sunil/"
+                target="blank"
+              >
                 <img src={LinkedinIcon} alt="Linkedin" />
               </a>
-              <a href="#">
+              <a href="https://github.com/sunilkkhadka/" target="blank">
                 <img src={GithubIcon} alt="Github" />
               </a>
               <a href="#">

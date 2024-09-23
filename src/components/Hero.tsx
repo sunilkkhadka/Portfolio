@@ -22,7 +22,7 @@ const Hero = () => {
           </p>
           <div className="hero__desktop-action-btns">
             <a
-              href="src/assets/files/Sunil_Khadka_CV.pdf"
+              href="/Sunil_Khadka_CV.pdf"
               download="Sunil_Khadka_CV"
               className="hero__desktop-download-cv"
             >
@@ -46,7 +46,7 @@ const Hero = () => {
               Contact Me
             </button>
             <a
-              href="src/assets/files/Sunil_Khadka_CV.pdf"
+              href="/Sunil_Khadka_CV.pdf"
               download="Sunil_Khadka_CV"
               className="hero__download-cv"
             >
