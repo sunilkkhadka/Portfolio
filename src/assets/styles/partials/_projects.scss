@@ -1,4 +1,11 @@
 .projects {
+  padding-top: 5rem;
+
+  @media (min-width: $md) {
+    padding-top: 7rem;
+    margin: 0;
+  }
+
   &__intro-title {
     font-family: $BebasNeue;
     letter-spacing: 1px;
