@@ -29,6 +29,18 @@ ul {
   list-style-type: none;
 }
 
+.top {
+  position: fixed;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  bottom: 5rem;
+  cursor: pointer;
+  z-index: 1000;
+  right: 2rem;
+  background-color: yellow;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+}
+
 // Mixins
 @import "./mixins/button";
 

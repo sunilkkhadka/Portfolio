@@ -95,6 +95,7 @@
     border-radius: 0.5rem;
     font-family: $Manrope;
     font-weight: bold;
+    color: black;
     cursor: pointer;
     background-color: rgb(234, 234, 0);
     border: none;
@@ -150,6 +151,13 @@
     // @include gradiantButton();
 
     background-color: rgb(234, 234, 0);
+    color: black;
+    width: 100%;
+    text-align: center;
+    font-family: $Manrope;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    padding: 1rem;
     border: none;
   }
 
