@@ -42,7 +42,11 @@ const Projects = () => {
                   </span>
                 </div>
                 <div className="projects__project-action-btns">
-                  <a href="https://tabapay.com/" target="blank">
+                  <a
+                    href="https://tabapay.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     Live Demo <FaExternalLinkAlt />
                   </a>
                 </div>
@@ -73,7 +77,11 @@ const Projects = () => {
                   </span>
                 </div>
                 <div className="projects__project-action-btns">
-                  <a href="https://tabapay.com/" target="blank">
+                  <a
+                    href="https://tabapay.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     Live Demo <FaExternalLinkAlt />
                   </a>
                   <a href="#">

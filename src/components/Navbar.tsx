@@ -54,10 +54,18 @@ const DesktopNav = () => {
         </ul>
       </div>
       <div className="navbar__desktop-social-icons">
-        <a href="https://www.linkedin.com/in/khadka-sunil/" target="blank">
+        <a
+          href="https://www.linkedin.com/in/khadka-sunil/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <SiLinkedin className="navbar__desktop-social-icon" />
         </a>
-        <a href="https://github.com/sunilkkhadka/" target="blank">
+        <a
+          href="https://github.com/sunilkkhadka/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <BsGithub className="navbar__desktop-social-icon" />
         </a>
         <a
@@ -117,10 +125,18 @@ const MobileNav = () => {
           </Link>
         </li>
         <li className="navbar__mobile-links-socials">
-          <a href="https://www.linkedin.com/in/khadka-sunil/" target="blank">
+          <a
+            href="https://www.linkedin.com/in/khadka-sunil/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src={LinkedinIcon} alt="linkedin" />
           </a>
-          <a href="https://github.com/sunilkkhadka/" target="blank">
+          <a
+            href="https://github.com/sunilkkhadka/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src={GithubIcon} alt="github" />
           </a>
         </li>

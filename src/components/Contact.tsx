@@ -10,16 +10,16 @@ import { toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
-  const formRef = useRef<HTMLFormElement | string>("");
+  const formRef = useRef<HTMLFormElement>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     emailjs
       .sendForm(
         import.meta.env.VITE_API_EMAIL_SERVICE_ID,
         import.meta.env.VITE_API_EMAIL_TEMPLATE_ID,
-        formRef.current,
+        formRef.current as HTMLFormElement,
         {
           publicKey: import.meta.env.VITE_API_EMAIL_PUBLIC_KEY,
         }
@@ -27,13 +27,17 @@ const Contact = () => {
       .then(
         () => {
           toast("👋 Thanks for reaching out. Do check your email");
-          formRef.current.reset();
+          if (formRef.current) {
+            formRef.current.reset();
+          }
         },
         () => {
           toast(
             "🫢 Oops! Something went wrong. Please use the info on the left."
           );
-          formRef.current.reset();
+          if (formRef.current) {
+            formRef.current.reset();
+          }
         }
       );
   };
@@ -65,11 +69,16 @@ const Contact = () => {
               <div className="contact__social-icons">
                 <a
                   href="https://www.linkedin.com/in/khadka-sunil/"
-                  target="blank"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <img src={LinkedinIcon} alt="Linkedin" />
                 </a>
-                <a href="https://github.com/sunilkkhadka/" target="blank">
+                <a
+                  href="https://github.com/sunilkkhadka/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <img src={GithubIcon} alt="Github" />
                 </a>
                 <a href="#">
