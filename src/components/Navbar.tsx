@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-scroll";
+import { toast } from "react-toastify";
 
 import { BsGithub } from "react-icons/bs";
 import { SiLinkedin } from "react-icons/si";
@@ -63,6 +64,7 @@ const DesktopNav = () => {
           href="/Sunil_Khadka_CV.pdf"
           download="Sunil_Khadka_CV"
           className="navbar__desktop-download-cv"
+          onClick={() => toast(" 🥳 Hoping to hear from you soon!!")}
         >
           <span className="navbar__desktop-download-icon">
             <FaDownload />

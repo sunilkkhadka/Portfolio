@@ -4,6 +4,7 @@ import { FaDownload, FaPhoneFlip } from "react-icons/fa6";
 import Navbar from "./Navbar";
 
 import profile from "../assets/images/1697507006331.jpeg";
+import { toast } from "react-toastify";
 
 const Hero = () => {
   return (
@@ -26,6 +27,7 @@ const Hero = () => {
               href="/Sunil_Khadka_CV.pdf"
               download="Sunil_Khadka_CV"
               className="hero__desktop-download-cv"
+              onClick={() => toast(" 🥳 Hoping to hear from you soon!!")}
             >
               <span className="icon">
                 <FaDownload />
@@ -45,16 +47,22 @@ const Hero = () => {
             </Link>
           </div>
           <div className="hero__action-btns">
-            <button className="hero__contact-me">
+            <Link
+              to="contact"
+              smooth={true}
+              duration={500}
+              className="hero__contact-me"
+            >
               <span className="icon">
                 <FaPhoneFlip />
               </span>
               Contact Me
-            </button>
+            </Link>
             <a
               href="/Sunil_Khadka_CV.pdf"
               download="Sunil_Khadka_CV"
               className="hero__download-cv"
+              onClick={() => toast(" 🥳 Hoping to hear from you soon!!")}
             >
               <span className="icon">
                 <FaDownload />
