@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-scroll";
+import { toast } from "react-toastify";
 
 import { BsGithub } from "react-icons/bs";
 import { SiLinkedin } from "react-icons/si";
@@ -53,16 +54,25 @@ const DesktopNav = () => {
         </ul>
       </div>
       <div className="navbar__desktop-social-icons">
-        <a href="https://www.linkedin.com/in/khadka-sunil/" target="blank">
+        <a
+          href="https://www.linkedin.com/in/khadka-sunil/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <SiLinkedin className="navbar__desktop-social-icon" />
         </a>
-        <a href="https://github.com/sunilkkhadka/" target="blank">
+        <a
+          href="https://github.com/sunilkkhadka/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <BsGithub className="navbar__desktop-social-icon" />
         </a>
         <a
           href="/Sunil_Khadka_CV.pdf"
           download="Sunil_Khadka_CV"
           className="navbar__desktop-download-cv"
+          onClick={() => toast(" 🥳 Hoping to hear from you soon!!")}
         >
           <span className="navbar__desktop-download-icon">
             <FaDownload />
@@ -115,10 +125,18 @@ const MobileNav = () => {
           </Link>
         </li>
         <li className="navbar__mobile-links-socials">
-          <a href="https://www.linkedin.com/in/khadka-sunil/" target="blank">
+          <a
+            href="https://www.linkedin.com/in/khadka-sunil/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src={LinkedinIcon} alt="linkedin" />
           </a>
-          <a href="https://github.com/sunilkkhadka/" target="blank">
+          <a
+            href="https://github.com/sunilkkhadka/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src={GithubIcon} alt="github" />
           </a>
         </li>

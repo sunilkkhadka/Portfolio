@@ -3,8 +3,45 @@ import TwitterIcon from "../assets/svg/twitter.svg";
 import LinkedinIcon from "../assets/svg/linkedin.svg";
 import Footer from "./Footer";
 import { Element } from "react-scroll";
+import { useRef } from "react";
+
+import { toast } from "react-toastify";
+
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  const formRef = useRef<HTMLFormElement>(null);
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_API_EMAIL_SERVICE_ID,
+        import.meta.env.VITE_API_EMAIL_TEMPLATE_ID,
+        formRef.current as HTMLFormElement,
+        {
+          publicKey: import.meta.env.VITE_API_EMAIL_PUBLIC_KEY,
+        }
+      )
+      .then(
+        () => {
+          toast("👋 Thanks for reaching out. Do check your email");
+          if (formRef.current) {
+            formRef.current.reset();
+          }
+        },
+        () => {
+          toast(
+            "🫢 Oops! Something went wrong. Please use the info on the left."
+          );
+          if (formRef.current) {
+            formRef.current.reset();
+          }
+        }
+      );
+  };
+
   return (
     <Element name="contact">
       <section className="contact">
@@ -21,18 +58,27 @@ const Contact = () => {
               </p>
               <p>
                 For more info, here's my{" "}
-                <a href="/Sunil_Khadka_CV.pdf" download="Sunil_Khadka_CV">
+                <a
+                  href="/Sunil_Khadka_CV.pdf"
+                  download="Sunil_Khadka_CV"
+                  onClick={() => toast(" 🥳 Hoping to hear from you soon!!")}
+                >
                   <span className="contact__email">resume</span>
                 </a>
               </p>
               <div className="contact__social-icons">
                 <a
                   href="https://www.linkedin.com/in/khadka-sunil/"
-                  target="blank"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <img src={LinkedinIcon} alt="Linkedin" />
                 </a>
-                <a href="https://github.com/sunilkkhadka/" target="blank">
+                <a
+                  href="https://github.com/sunilkkhadka/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <img src={GithubIcon} alt="Github" />
                 </a>
                 <a href="#">
@@ -42,24 +88,24 @@ const Contact = () => {
             </div>
           </div>
           <div className="contact__form">
-            <form>
+            <form ref={formRef} onSubmit={handleSubmit}>
               <div>
                 <label htmlFor="name">Name</label>
-                <input type="text" id="name" />
+                <input type="text" id="name" name="name" />
               </div>
               <div>
                 <label htmlFor="email">Email</label>
-                <input type="email" id="email" />
+                <input type="email" id="email" name="email" />
               </div>
               <div>
                 <label htmlFor="subject">Subject</label>
-                <input type="text" id="subject" />
+                <input type="text" id="subject" name="subject" />
               </div>
               <div>
                 <label htmlFor="message">Message</label>
-                <textarea id="message"></textarea>
+                <textarea id="message" name="message"></textarea>
               </div>
-              <button>Submit</button>
+              <button type="submit">Submit</button>
             </form>
           </div>
         </div>

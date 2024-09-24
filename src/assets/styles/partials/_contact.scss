@@ -72,6 +72,7 @@
         font-family: $Manrope;
         padding: 0.7rem;
         border-radius: 0.5rem;
+        resize: none;
       }
 
       button {
@@ -119,10 +120,12 @@
   }
 
   &__email {
+    color: $stormGrey;
     font-weight: bold;
     border-bottom: 3px solid $bluishPurple;
 
     @media (min-width: $md) {
+      color: $white;
       border-bottom: 3px solid rgb(234, 234, 0);
     }
   }

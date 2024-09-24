@@ -42,16 +42,16 @@ const Projects = () => {
                   </span>
                 </div>
                 <div className="projects__project-action-btns">
-                  <a href="#">
+                  <a
+                    href="https://tabapay.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     Live Demo <FaExternalLinkAlt />
-                  </a>
-                  <a href="#">
-                    See on github <BsGithub />
                   </a>
                 </div>
               </div>
             </div>
-
             <div className="projects__card">
               <div className="projects__card-image">
                 <img src={TabapayThumbnail} alt="Tabapay website" />
@@ -77,7 +77,11 @@ const Projects = () => {
                   </span>
                 </div>
                 <div className="projects__project-action-btns">
-                  <a href="https://tabapay.com/" target="blank">
+                  <a
+                    href="https://tabapay.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     Live Demo <FaExternalLinkAlt />
                   </a>
                   <a href="#">
