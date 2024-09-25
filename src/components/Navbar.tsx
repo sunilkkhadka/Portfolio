@@ -9,6 +9,8 @@ import { FaDownload } from "react-icons/fa6";
 import GithubIcon from "../assets/svg/github.svg";
 import LinkedinIcon from "../assets/svg/linkedin.svg";
 
+import Logo from "../assets/images/sunilkhadkalogo.png";
+
 import useWindowSize from "../hooks/useWindowSize";
 
 const Navbar = () => {
@@ -18,7 +20,7 @@ const Navbar = () => {
     <header className="navbar">
       <div className="wrapper">
         <nav className="navbar__container">
-          <h1 className="navbar__logo">CODE</h1>
+          <img className="navbar__logo" src={Logo} alt="Sunil Khadka Logo" />
           {size.width > 768 ? <DesktopNav /> : <MobileNav />}
         </nav>
       </div>
