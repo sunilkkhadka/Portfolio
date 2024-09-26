@@ -2,12 +2,12 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import "./assets/styles/main.scss";
-import Hero from "./components/Hero";
-import Contact from "./components/Contact";
-import Projects from "./components/Projects";
-import TechStack from "./components/TechStack";
-import Experience from "./components/Experience";
-import BackToTop from "./components/BackToTop";
+import BackToTop from "./organisms/BackToTop";
+import Contact from "./organisms/Contact";
+import Experience from "./organisms/Experience";
+import Hero from "./organisms/Hero";
+import Projects from "./organisms/Projects";
+import TechStack from "./organisms/TechStack";
 
 function App() {
   return (
