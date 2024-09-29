@@ -16,6 +16,7 @@ import ReactQueryIcon from "../assets/svg/react-query.svg";
 import TypescriptIcon from "../assets/svg/typescript.svg";
 import JavascriptIcon from "../assets/svg/javascript.svg";
 
+import TabapayDashboard from "../assets/images/dashboard.png";
 import TabapayThumbnail from "../assets/images/tabapay-thumbnail.png";
 
 export const Image = {
@@ -40,4 +41,5 @@ export const Image = {
 
 export const Thumbnail = {
   TABAPAY: TabapayThumbnail,
+  TABAPAY_DASHBOARD: TabapayDashboard,
 };

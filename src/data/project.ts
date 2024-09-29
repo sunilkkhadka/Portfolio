@@ -10,7 +10,7 @@ const projectData: ProjectProps[] = [
     thumbnail: Thumbnail.TABAPAY,
     title: "TabaPay.com",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non dolorem sint iure hic nostrum nulla sed! Voluptas amet, adipisci sit dolorem inventore quae accusamus error doloribus fuga quidem accusantium quas.",
+      "Build and maintain static landing page for TabaPay primarily using html, css and javascript. Implemented image compression and perfomance optimization by minimizing bundle size and converting image format to .webp, resulting in significat peromance boost by 70%. Tools like lighthouse and browserstack were used for performance diagnostic and cross browser compatibility",
     tags: ["html", "css", "scss", "javascript", "typescript"],
     links: [
       {
@@ -19,6 +19,15 @@ const projectData: ProjectProps[] = [
         icon: FaExternalLinkAlt,
       },
     ],
+  },
+  {
+    id: uuidv4(),
+    thumbnail: Thumbnail.TABAPAY_DASHBOARD,
+    title: "TabaPay Dashboard",
+    description:
+      "A dashboard site for TabaPay that handles operations like clients and sub clients on-boarding, user management, role based access control (RBAC). Created user interfaces using React.js and TypeScript. Integrate react query to efficiently cache api response for better performance. Create and integrate RESTful APIs using golang for the backend. Implemented JWT to remember user session and session based authentication and authorization.",
+    tags: ["SCSS", "React JS", "TypeScript", "Golang", "MySQL"],
+    links: [],
   },
 ];
 
