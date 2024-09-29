@@ -15,11 +15,19 @@
   &__container {
     padding: 2.5rem 0;
 
+    // @media (min-width: $md) {
+    //   display: flex;
+    //   align-items: flex-start;
+    //   gap: 7rem;
+    //   justify-content: space-between;
+    // }
+
     @media (min-width: $md) {
-      display: flex;
-      align-items: flex-start;
-      gap: 7rem;
-      justify-content: space-between;
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: 1.5fr 1fr;
+      // align-items: flex-start;
+      // justify-items: center;
     }
   }
 
@@ -33,13 +41,21 @@
     font-size: 1.7rem;
 
     @media (min-width: $md) {
-      font-size: 4.5rem;
+      font-size: 2rem;
+    }
+
+    @media (min-width: $lg) {
+      font-size: 3.5rem;
     }
 
     .big-text {
       padding-top: 0.5rem;
       font-size: 3rem;
       display: inline-block;
+
+      @media (min-width: $md) {
+        font-size: 2.5rem;
+      }
 
       @media (min-width: $md) {
         font-size: 4.5rem;
@@ -57,6 +73,10 @@
       display: inline-block;
 
       @media (min-width: $md) {
+        font-size: 2.5rem;
+      }
+
+      @media (min-width: $lg) {
         font-size: 4.5rem;
       }
 
@@ -77,6 +97,14 @@
     color: $white;
     padding-top: 1.5rem;
     line-height: 1.7;
+
+    @media (min-width: $md) {
+      font-size: 0.9rem;
+    }
+
+    @media (min-width: $lg) {
+      font-size: 1rem;
+    }
   }
 
   &__desktop-action-btns {
@@ -154,8 +182,6 @@
   }
 
   &__download-cv {
-    // @include gradiantButton();
-
     background-color: rgb(234, 234, 0);
     color: black;
     width: 100%;
@@ -185,8 +211,7 @@
 
   &__profile-img {
     width: 100%;
-    border-radius: 50%;
-    border: 7px solid white;
+    border-radius: 0.5rem;
     overflow: hidden;
     margin-top: 2rem;
 
@@ -195,7 +220,14 @@
     }
 
     @media (min-width: $md) {
-      width: 50%;
+      width: 100%;
+      margin-top: 0;
+    }
+
+    @media (min-width: $lg) {
+      width: 95%;
+      height: 90%;
+      justify-self: flex-end;
       margin-top: 0;
     }
   }
