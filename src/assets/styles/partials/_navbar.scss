@@ -7,11 +7,13 @@
   }
 
   &__logo {
-    font-family: $BebasNeue;
-    font-size: 1.75rem;
-    color: $white;
-    letter-spacing: 1px;
-    color: #c7c7c7;
+    width: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+
+    @media (min-width: $lg) {
+      width: 40px;
+    }
   }
 
   &__links {
@@ -25,9 +27,41 @@
     &-links {
       display: none;
       position: absolute;
+      right: 0;
+      margin-top: 5px;
+      background-color: $white;
+      z-index: 100;
+      border-radius: 0.5rem;
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+
+      li {
+        padding: 0.5rem 4rem;
+        text-align: center;
+        border-bottom: 1px solid rgb(225, 225, 225);
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        a {
+          font-family: $Manrope;
+          color: black;
+          font-size: 1rem;
+        }
+      }
 
       &.open {
         display: block;
+      }
+
+      &-socials {
+        display: flex;
+        justify-content: space-evenly;
+        gap: 1rem;
+
+        img {
+          width: 30px;
+        }
       }
     }
   }
@@ -40,19 +74,21 @@
 
     &-links {
       display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 1rem;
       gap: 2.5rem;
 
-      li:hover {
-        font-weight: bold;
-        border-bottom: 3px solid yellow;
+      li {
+        border-bottom: 3px solid transparent;
+
+        &:hover {
+          cursor: pointer;
+          border-bottom: 3px solid yellow;
+          transition: 0.2s ease;
+        }
       }
     }
-
-    // &-contact-me {
-    //   border: 0;
-    //   background: none;
-    //   color: $white;
-    // }
 
     &-contact-me {
       border: 1px solid $white;
@@ -64,17 +100,33 @@
     }
 
     &-download-cv {
-      background-color: rgb(234, 234, 0);
+      font-family: $Manrope;
       border: none;
-      padding: 0.7rem 1.5rem;
-      border-radius: 0.7rem;
+      border-bottom: 3px solid yellow;
+    }
+
+    &-download-icon {
+      padding-right: 0.3rem;
+    }
+
+    &-social-icons {
+      display: flex;
+      gap: 1rem;
+      color: $white;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    &-social-icon {
+      font-size: 1.5rem;
     }
   }
 
   &__hamburger {
     cursor: pointer;
     height: 2rem;
-    width: 2rem;
+    width: 2.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -86,6 +138,11 @@
       width: 1.5rem;
       background-color: $white;
       border-radius: 0.5rem;
+    }
+
+    &.open {
+      background-color: rgba(0, 0, 0, 0.3);
+      border-radius: 0.2rem;
     }
   }
 }

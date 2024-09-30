@@ -1,0 +1,132 @@
+.contact {
+  background-image: url("../svg/FooterMobile.svg");
+  width: 100%;
+  height: 100%;
+
+  background-repeat: no-repeat;
+
+  @media (min-width: 375px) {
+    width: 100%;
+    background-size: cover;
+    background-image: url("../svg/Footer.svg");
+  }
+
+  @media (min-width: $md) {
+    display: grid;
+    place-items: center;
+  }
+
+  &__container {
+    padding-top: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "intro"
+      "form";
+
+    @media (min-width: $md) {
+      margin-top: 20rem;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "intro form";
+    }
+  }
+
+  &__intro {
+    grid-area: intro;
+  }
+
+  &__form {
+    grid-area: form;
+    margin-top: 2rem;
+
+    @media (min-width: $md) {
+      margin-top: 0;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      div {
+        display: flex;
+        font-family: $Manrope;
+        color: $white;
+        flex-direction: column;
+      }
+
+      label {
+        padding-bottom: 0.3rem;
+      }
+
+      input[type="text"],
+      input[type="email"] {
+        padding: 0.8rem 0.7rem;
+        border: none;
+        border-radius: 0.3rem;
+      }
+
+      textarea {
+        height: 150px;
+        border: none;
+        font-family: $Manrope;
+        padding: 0.7rem;
+        border-radius: 0.5rem;
+        resize: none;
+      }
+
+      button {
+        width: fit-content;
+        padding: 0.7rem 1rem;
+        border-radius: 0.5rem;
+        font-family: $Manrope;
+        font-weight: bold;
+        cursor: pointer;
+        background-color: rgb(234, 234, 0);
+        border: none;
+      }
+    }
+  }
+
+  &__title {
+    font-family: $BebasNeue;
+    letter-spacing: 1px;
+    color: $lapisBlue;
+    font-size: 2.5rem;
+
+    @media (min-width: $md) {
+      text-align: left;
+      font-size: 3rem;
+      color: $white;
+    }
+  }
+
+  &__description {
+    font-family: $Manrope;
+    color: $stormGrey;
+    line-height: 1.5;
+    padding-top: 0.5rem;
+
+    @media (min-width: $md) {
+      text-align: left;
+      color: $white;
+    }
+  }
+
+  &__social-icons {
+    display: flex;
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+
+  &__email {
+    color: $stormGrey;
+    font-weight: bold;
+    border-bottom: 3px solid $bluishPurple;
+
+    @media (min-width: $md) {
+      color: $white;
+      border-bottom: 3px solid rgb(234, 234, 0);
+    }
+  }
+}

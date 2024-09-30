@@ -1,8 +1,11 @@
+import { Link } from "react-scroll";
+import { toast } from "react-toastify";
 import { FaDownload, FaPhoneFlip } from "react-icons/fa6";
 
 import Navbar from "./Navbar";
 
 import profile from "../assets/images/1697507006331.jpeg";
+// import profile from "../assets/images/graduation.jpg";
 
 const Hero = () => {
   return (
@@ -20,19 +23,53 @@ const Hero = () => {
             clean code and innovative solutions, I aim to bring your ideas to
             life through seamless digital experiences.
           </p>
-          <div className="hero__action-btns">
-            <button className="hero__contact-me">
-              <span className="icon">
-                <FaPhoneFlip />
-              </span>
-              Contact Me
-            </button>
-            <button className="hero__download-cv">
+          <div className="hero__desktop-action-btns">
+            <a
+              href="/Sunil_Khadka_CV.pdf"
+              download="Sunil_Khadka_CV"
+              className="hero__desktop-download-cv"
+              onClick={() => toast(" 🥳 Hoping to hear from you soon!!")}
+            >
               <span className="icon">
                 <FaDownload />
               </span>
               Download CV
-            </button>
+            </a>
+            <Link
+              to="contact"
+              smooth={true}
+              duration={500}
+              className="hero__desktop-contact-me"
+            >
+              <span className="icon">
+                <FaPhoneFlip />
+              </span>
+              Contact Me
+            </Link>
+          </div>
+          <div className="hero__action-btns">
+            <Link
+              to="contact"
+              smooth={true}
+              duration={500}
+              className="hero__contact-me"
+            >
+              <span className="icon">
+                <FaPhoneFlip />
+              </span>
+              Contact Me
+            </Link>
+            <a
+              href="/Sunil_Khadka_CV.pdf"
+              download="Sunil_Khadka_CV"
+              className="hero__download-cv"
+              onClick={() => toast(" 🥳 Hoping to hear from you soon!!")}
+            >
+              <span className="icon">
+                <FaDownload />
+              </span>
+              Download CV
+            </a>
           </div>
         </div>
         <div className="hero__profile-img">
