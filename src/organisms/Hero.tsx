@@ -4,7 +4,8 @@ import { FaDownload, FaPhoneFlip } from "react-icons/fa6";
 
 import Navbar from "./Navbar";
 
-import profile from "../assets/images/graduation.jpg";
+import profile from "../assets/images/1697507006331.jpeg";
+// import profile from "../assets/images/graduation.jpg";
 
 const Hero = () => {
   return (
