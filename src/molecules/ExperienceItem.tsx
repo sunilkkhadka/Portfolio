@@ -1,11 +1,19 @@
+import { motion } from "framer-motion";
+
 import { Image } from "../utils/images";
 import { ExperienceProps } from "../types/portfolio.type";
 
 const ExperienceItem = (props: ExperienceProps) => {
-  const { title, duration, companyName, description, tools } = props;
+  const { title, duration, companyName, description, tools, isVisible, delay } =
+    props;
 
   return (
-    <div className="experiences__item">
+    <motion.div
+      className="experiences__item"
+      initial={{ opacity: 0, y: 50 }}
+      animate={isVisible ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.6, ease: "easeOut", delay: delay }}
+    >
       <div className="experiences__info">
         <img
           src={Image.POINT}
@@ -28,7 +36,7 @@ const ExperienceItem = (props: ExperienceProps) => {
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,10 +1,18 @@
+import { motion } from "framer-motion";
+
 import { ProjectProps } from "../types/portfolio.type";
 
 const ProjectItem = (props: ProjectProps) => {
-  const { thumbnail, title, description, tags, links } = props;
+  const { thumbnail, title, description, tags, links, isVisible, delay } =
+    props;
 
   return (
-    <div className="projects__card">
+    <motion.div
+      className="projects__card"
+      initial={{ opacity: 0, y: 50 }}
+      animate={isVisible ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.6, ease: "easeOut", delay: delay }}
+    >
       <div className="projects__card-image">
         <img src={thumbnail} alt="Tabapay website" />
       </div>
@@ -34,7 +42,7 @@ const ProjectItem = (props: ProjectProps) => {
           )}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

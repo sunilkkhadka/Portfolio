@@ -1,18 +1,23 @@
 import { Link } from "react-scroll";
+import { motion } from "framer-motion";
 import { toast } from "react-toastify";
 import { FaDownload, FaPhoneFlip } from "react-icons/fa6";
 
 import Navbar from "./Navbar";
 
 import profile from "../assets/images/1697507006331.jpeg";
-// import profile from "../assets/images/graduation.jpg";
 
 const Hero = () => {
   return (
     <section className="hero">
       <Navbar />
       <div className="wrapper hero__container">
-        <div className="hero__intro">
+        <motion.div
+          className="hero__intro"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+        >
           <h1 className="hero__title">
             HI, I AM <br /> <span className="big-text">SUNIL KHADKA </span>{" "}
             <br /> <div className="underline-text">A Full Stack Engineer.</div>
@@ -71,10 +76,15 @@ const Hero = () => {
               Download CV
             </a>
           </div>
-        </div>
-        <div className="hero__profile-img">
+        </motion.div>
+        <motion.div
+          className="hero__profile-img"
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+        >
           <img src={profile} alt="Profile Image" />
-        </div>
+        </motion.div>
       </div>
     </section>
   );
