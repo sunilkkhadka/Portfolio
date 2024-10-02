@@ -12,6 +12,8 @@ export type ExperienceProps = {
   duration: string;
   description: string;
   tools: ImageIconProps[];
+  isVisible?: boolean;
+  delay: number;
 };
 
 export type ProjectProps = {
@@ -25,4 +27,6 @@ export type ProjectProps = {
     url: string;
     icon: IconType;
   }[];
+  isVisible?: boolean;
+  delay: number;
 };
