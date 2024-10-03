@@ -4,36 +4,36 @@ import { Image } from "../utils/images";
 import { ExperienceProps } from "../types/portfolio.type";
 
 const experienceData: ExperienceProps[] = [
-  {
-    id: uuidv4(),
-    title: "Freelance",
-    companyName: "Fanofa",
-    duration: "Jul 2024 - Sep 2024",
-    description:
-      "Created REST APIs for an ecommerce platform that specializes in advertising products. Integrated Paypal subscription system as well as chat feature using SDKs and Web Sockets.",
-    tools: [
-      {
-        icon: Image.GOLANG,
-        alt: "Golang",
-      },
-      {
-        icon: Image.MYSQL,
-        alt: "MySQL",
-      },
-      {
-        icon: Image.WEBSOCKET,
-        alt: "Web Socket",
-      },
-      {
-        icon: Image.DOCKER,
-        alt: "Docker",
-      },
-      {
-        icon: Image.POSTMAN,
-        alt: "Postman",
-      },
-    ],
-  },
+  // {
+  //   id: uuidv4(),
+  //   title: "Freelance",
+  //   companyName: "Fanofa",
+  //   duration: "Jul 2024 - Sep 2024",
+  //   description:
+  //     "Created REST APIs for an ecommerce platform that specializes in advertising products. Integrated Paypal subscription system as well as chat feature using SDKs and Web Sockets.",
+  //   tools: [
+  //     {
+  //       icon: Image.GOLANG,
+  //       alt: "Golang",
+  //     },
+  //     {
+  //       icon: Image.MYSQL,
+  //       alt: "MySQL",
+  //     },
+  //     {
+  //       icon: Image.WEBSOCKET,
+  //       alt: "Web Socket",
+  //     },
+  //     {
+  //       icon: Image.DOCKER,
+  //       alt: "Docker",
+  //     },
+  //     {
+  //       icon: Image.POSTMAN,
+  //       alt: "Postman",
+  //     },
+  //   ],
+  // },
   {
     id: uuidv4(),
     title: "Software Engineer",
