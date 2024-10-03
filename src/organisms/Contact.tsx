@@ -1,19 +1,21 @@
+import emailjs from "@emailjs/browser";
+import { toast } from "react-toastify";
+import { Element } from "react-scroll";
+import { useRef, useState } from "react";
+
 import GithubIcon from "../assets/svg/github.svg";
 import TwitterIcon from "../assets/svg/twitter.svg";
 import LinkedinIcon from "../assets/svg/linkedin.svg";
+
 import Footer from "./Footer";
-import { Element } from "react-scroll";
-import { useRef } from "react";
-
-import { toast } from "react-toastify";
-
-import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setIsSubmitting(true);
 
     emailjs
       .sendForm(
@@ -29,6 +31,7 @@ const Contact = () => {
           toast("👋 Thanks for reaching out. Do check your email");
           if (formRef.current) {
             formRef.current.reset();
+            setIsSubmitting(false);
           }
         },
         () => {
@@ -37,6 +40,7 @@ const Contact = () => {
           );
           if (formRef.current) {
             formRef.current.reset();
+            setIsSubmitting(false);
           }
         }
       );
@@ -91,21 +95,23 @@ const Contact = () => {
             <form ref={formRef} onSubmit={handleSubmit}>
               <div>
                 <label htmlFor="name">Name</label>
-                <input type="text" id="name" name="name" />
+                <input type="text" id="name" name="name" required />
               </div>
               <div>
                 <label htmlFor="email">Email</label>
-                <input type="email" id="email" name="email" />
+                <input type="email" id="email" name="email" required />
               </div>
               <div>
                 <label htmlFor="subject">Subject</label>
-                <input type="text" id="subject" name="subject" />
+                <input type="text" id="subject" name="subject" required />
               </div>
               <div>
                 <label htmlFor="message">Message</label>
-                <textarea id="message" name="message"></textarea>
+                <textarea id="message" name="message" required></textarea>
               </div>
-              <button type="submit">Submit</button>
+              <button type="submit" disabled={isSubmitting}>
+                Submit
+              </button>
             </form>
           </div>
         </div>

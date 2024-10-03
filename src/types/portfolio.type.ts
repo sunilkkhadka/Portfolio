@@ -13,7 +13,7 @@ export type ExperienceProps = {
   description: string;
   tools: ImageIconProps[];
   isVisible?: boolean;
-  delay: number;
+  delay?: number;
 };
 
 export type ProjectProps = {
@@ -28,5 +28,5 @@ export type ProjectProps = {
     icon: IconType;
   }[];
   isVisible?: boolean;
-  delay: number;
+  delay?: number;
 };
