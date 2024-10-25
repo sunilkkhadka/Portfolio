@@ -29,4 +29,5 @@ export type ProjectProps = {
   }[];
   isVisible?: boolean;
   delay?: number;
+  listStyle?: string;
 };

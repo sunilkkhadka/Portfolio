@@ -1,13 +1,15 @@
-import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 
 import "./assets/styles/main.scss";
-import BackToTop from "./organisms/BackToTop";
-import Contact from "./organisms/Contact";
-import Experience from "./organisms/Experience";
+
 import Hero from "./organisms/Hero";
+// import Blog from "./organisms/Blog";
+import Contact from "./organisms/Contact";
 import Projects from "./organisms/Projects";
+import BackToTop from "./organisms/BackToTop";
 import TechStack from "./organisms/TechStack";
+import Experience from "./organisms/Experience";
 
 function App() {
   return (
@@ -16,6 +18,7 @@ function App() {
       <TechStack />
       <Experience />
       <Projects />
+      {/* <Blog /> */}
       <Contact />
       <BackToTop />
       <ToastContainer

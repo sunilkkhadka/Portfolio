@@ -18,7 +18,7 @@
 
   &__links {
     display: flex;
-    font-family: $Manrope;
+    font-family: $OpenSans;
   }
 
   &__mobile {
@@ -44,7 +44,7 @@
         }
 
         a {
-          font-family: $Manrope;
+          font-family: $OpenSans;
           color: black;
           font-size: 1rem;
         }
@@ -70,7 +70,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: $Manrope;
+    font-family: $OpenSans;
 
     &-links {
       display: flex;
@@ -88,6 +88,28 @@
           transition: 0.2s ease;
         }
       }
+
+      .blog-link {
+        font-weight: bold;
+        display: flex;
+        border-bottom: 3px solid yellow;
+
+        &:hover {
+          border-bottom: none;
+          transition: none;
+        }
+
+        .new {
+          font-size: 0.6rem;
+          background-color: yellow;
+          height: fit-content;
+          color: #333;
+          font-weight: bold;
+          border-radius: 0.2rem;
+          padding: 0 0.2rem;
+          margin-left: 0.3rem;
+        }
+      }
     }
 
     &-contact-me {
@@ -100,7 +122,7 @@
     }
 
     &-download-cv {
-      font-family: $Manrope;
+      font-family: $OpenSans;
       border: none;
       border-bottom: 3px solid yellow;
     }

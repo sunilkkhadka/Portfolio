@@ -5,6 +5,7 @@ import { toast } from "react-toastify";
 import { BsGithub } from "react-icons/bs";
 import { SiLinkedin } from "react-icons/si";
 import { FaDownload } from "react-icons/fa6";
+import { IoOpenOutline } from "react-icons/io5";
 
 import GithubIcon from "../assets/svg/github.svg";
 import LinkedinIcon from "../assets/svg/linkedin.svg";
@@ -52,6 +53,17 @@ const DesktopNav = () => {
             <Link to="contact" smooth={true} duration={500}>
               Contact
             </Link>
+          </li>
+          <li>
+            <a
+              href="https://sunilkhadka.hashnode.dev/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="blog-link"
+            >
+              {/* Blogs <IoOpenOutline /> */}
+              Blogs <div className="new">new</div>
+            </a>
           </li>
         </ul>
       </div>
@@ -125,6 +137,15 @@ const MobileNav = () => {
           <Link to="contact" smooth={true} duration={500}>
             Contact
           </Link>
+        </li>
+        <li>
+          <a
+            href="https://sunilkhadka.hashnode.dev/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Blogs <IoOpenOutline />
+          </a>
         </li>
         <li className="navbar__mobile-links-socials">
           <a

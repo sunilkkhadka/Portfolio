@@ -19,7 +19,7 @@ const Hero = () => {
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
           <h1 className="hero__title">
-            HI, I AM <br /> <span className="big-text">SUNIL KHADKA </span>{" "}
+            Hi, I am <br /> <span className="big-text">Sunil Khadka </span>{" "}
             <br /> <div className="underline-text">A Full Stack Engineer.</div>
           </h1>
           <p className="hero__description">
