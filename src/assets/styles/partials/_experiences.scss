@@ -25,7 +25,7 @@
   }
 
   &__title {
-    font-family: $BebasNeue;
+    font-family: $BricolageGrotesque;
     letter-spacing: 1px;
     color: $lapisBlue;
     font-size: 2.5rem;
@@ -37,7 +37,7 @@
   }
 
   &__description {
-    font-family: $Manrope;
+    font-family: $OpenSans;
     color: $stormGrey;
     line-height: 1.5;
     padding-top: 0.5rem;
@@ -60,7 +60,8 @@
   }
 
   &__info {
-    font-family: $Manrope;
+    font-family: $OpenSans;
+    line-height: 1.5;
     display: grid;
     grid-template-columns: auto 1fr;
     grid-template-areas:
@@ -91,8 +92,9 @@
   &__company-name {
     grid-area: company;
     align-self: center;
+    font-family: $BricolageGrotesque;
     color: $frenchBlue;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: bold;
   }
 
@@ -102,6 +104,7 @@
     font-weight: bold;
     justify-self: left;
     align-self: center;
+    font-family: $BricolageGrotesque;
 
     @media (min-width: $sm) {
       justify-self: right;
@@ -112,6 +115,7 @@
     grid-area: position;
     justify-self: left;
     color: $stormGrey;
+    font-family: $BricolageGrotesque;
   }
 
   &__work-description {

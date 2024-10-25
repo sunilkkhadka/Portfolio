@@ -3,12 +3,20 @@ import { motion } from "framer-motion";
 import { ProjectProps } from "../types/portfolio.type";
 
 const ProjectItem = (props: ProjectProps) => {
-  const { thumbnail, title, description, tags, links, isVisible, delay } =
-    props;
+  const {
+    thumbnail,
+    title,
+    description,
+    tags,
+    links,
+    isVisible,
+    delay,
+    listStyle,
+  } = props;
 
   return (
     <motion.div
-      className="projects__card"
+      className={`projects__card ${listStyle}`}
       initial={{ opacity: 0, y: 50 }}
       animate={isVisible ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6, ease: "easeOut", delay: delay }}
